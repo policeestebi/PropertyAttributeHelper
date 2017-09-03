@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Reflection;
-using System.Text;
+using System.Linq;
 
-namespace PropertyAttributeHelper
+namespace PropertyAttributeUtils
 {
-    public static class AttributeHelper
+    public static class AttributeUtil
     {
         public static TAttr GetPropertyAttributeValue<T, TValue, TAttr>(
            Expression<Func<T, TValue>> selector) where TAttr : Attribute
@@ -34,31 +34,25 @@ namespace PropertyAttributeHelper
             }
         }
 
-        public static IDictionary<string, TAttr> GetPropetiesAttributes<T, TAttr>() where TAttr : Attribute
+        public static IDictionary<string, IList<TAttr>> GetPropetiesAttributes<T, TAttr>() where TAttr : Attribute
         {
-            var propertyAttributes = new Dictionary<string, TAttr>();
+            var propertyAttributes = new Dictionary<string, IList<TAttr>>();
 
             var props = typeof(T).GetProperties();
 
             foreach (var prop in props)
             {
-                var attrs = prop.GetCustomAttributes(true);
-
-                foreach (object attr in attrs)
-                {
-                    var authAttr = (TAttr)attr;
-
-                    if (authAttr == null) continue;
-
-                    var propName = prop.Name;
-
-                    propertyAttributes.Add(propName, authAttr);
-
-                }
+                var attrs = prop.GetCustomAttributes(true).OfType<TAttr>().ToList(); ;
+               
+                propertyAttributes.Add(prop.Name, attrs);
             }
 
             return propertyAttributes;
+        }
 
+        public static IDictionary<string, IList<Attribute>> GetPropetiesAttributes<T>()
+        {
+            return GetPropetiesAttributes<T, Attribute>();
         }
 
         public static TAtrr GetClassAttributeValue<T, TAtrr>() where TAtrr : Attribute
@@ -76,7 +70,7 @@ namespace PropertyAttributeHelper
 
             foreach (var attr in attrs)
             {
-                var authAttr = (TAttr)attr;
+                var authAttr = attr as TAttr;
 
                 if (authAttr == null) continue;
 

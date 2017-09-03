@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PropertyAttributeHelper", "AttrHelper\PropertyAttributeHelper.csproj", "{C5322313-8251-407E-9AF8-803B5AB2F1D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PropertyAttributeUtils", "AttrHelper\PropertyAttributeUtils.csproj", "{C5322313-8251-407E-9AF8-803B5AB2F1D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PropertyAttributeHelper.Tests", "PropertyAttributeHelper.Tests\PropertyAttributeHelper.Tests.csproj", "{7DE99653-7F93-49AF-A99E-FD25DAD796DB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PropertyAttributeUtils.Tests", "PropertyAttributeHelper.Tests\PropertyAttributeUtils.Tests.csproj", "{7DE99653-7F93-49AF-A99E-FD25DAD796DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
