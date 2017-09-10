@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+   <id>AttributeUtil</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Esteban Ramirez</authors>
+    <owners>Esteban Ramirez</owners>
+    <projectUrl>https://github.com/policeestebi/PropertyAttributeHelper</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Simple util to get attributes that decorates any property or class definition.</description>
+    <releaseNotes>Initial Release</releaseNotes>
+    <copyright>PoliceEstebi 2017</copyright>
+    <tags>Attributes Properties Util</tags>
+    <dependencies>
+    </dependencies>
+  </metadata>
+</package>
