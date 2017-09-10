@@ -4,13 +4,20 @@ This is a small solution for obtaining custom attributes information. You can ge
 
 If you want to take a look of how to use this library please use as reference the test library.
 
-Let me know if you want new features or need something else, I'll be more than pleased to help you out.
+
 
 ## Installation
 
 ```
 Install-Package PropertyAttributeUtils -Version 1.0.0
 ```
+
+## Contributing
+
+Contributions are welcome! Let me know if you want new features or need something else by opening issues or requests.
+
+I'll be more than pleased to help you out.
+
 
 
 
